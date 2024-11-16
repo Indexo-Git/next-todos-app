@@ -5,7 +5,7 @@ import prisma from "@/lib/prisma";
 import { NewTodo, TodosGrid } from "@/todos";
 
 
-export default async function RestTodosPage() {
+export default async function ServerTodosPage() {
 
   const todos = await prisma.todo.findMany({ orderBy: { description : 'asc' } });
 
