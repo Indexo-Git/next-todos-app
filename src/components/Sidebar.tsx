@@ -2,6 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { CiBookmark, CiHome, CiLogout } from "react-icons/ci"
 import { SidebarItem } from '.';
+import { IoBasketOutline, IoCode } from "react-icons/io5";
 
 interface menuItem  {
     path: string;
@@ -19,13 +20,23 @@ const menu: menuItem[] = [
         path: "/dashboard/rest-todos",
         icon: <CiBookmark size={30} />,
         title: "REST Todos"
-    }
-    ,
+    },
     {
         path: "/dashboard/server-actions",
         icon: <CiBookmark size={30} />,
         title: "Server Actions"
+    },
+    {
+        path: "/dashboard/cookies",
+        icon: <IoCode size={30} />,
+        title: "Cookies"
+    },
+    {
+        path: "/dashboard/products",
+        icon: <IoBasketOutline size={30} />,
+        title: "Products"
     }
+
 ]
 
 export const Sidebar = () => {
@@ -34,13 +45,13 @@ export const Sidebar = () => {
         <div>
             <div className="-mx-6 px-6 py-4">
                 <Link href="/dashboard">
-                    <Image src="https://tailus.io/sources/blocks/stats-cards/preview/images/logo.svg" width={100} height={100} className="w-32" alt="tailus logo"/>
+                    <Image src="https://chuchovergara.com/svg/logo.svg" width={100} height={100} className="w-10" alt="tailus logo"/>
                 </Link>
             </div>
 
             <div className="mt-8 text-center">
-                <Image src="https://tailus.io/sources/blocks/stats-cards/preview/images/second_user.webp" width={100} height={100} alt="" className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"/>
-                <h5 className="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Cynthia J. Watts</h5>
+                <Image src="https://lh3.googleusercontent.com/ogw/AF2bZyivtQMHcdUv5sKr6NoIDKE6rTAIyMStVgRf885HOzpBIA" width={100} height={100} alt="" className="w-10 h-10 m-auto rounded-full object-cover lg:w-28 lg:h-28"/>
+                <h5 className="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">Jesus Vergara</h5>
                 <span className="hidden text-gray-400 lg:block">Admin</span>
             </div>
 

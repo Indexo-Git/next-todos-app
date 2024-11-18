@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'tailus.io'
+        hostname: 'lh3.googleusercontent.com'
       }
     ]
   }
