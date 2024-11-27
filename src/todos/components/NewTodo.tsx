@@ -3,16 +3,17 @@
 import { FormEvent, useState } from "react";
 import { IoTrashOutline } from "react-icons/io5";
 import { addTodo, deleteCompleted } from "../actions/todo-actions";
+import { useSession } from "next-auth/react";
 
 export const NewTodo = () => { 
-
+  const { data: session } = useSession();
     const [description, setDescription] = useState('');
 
     const onSubmit = async (e: FormEvent) => {
         e.preventDefault();
         if(description.trim() === '') return;
 
-        await addTodo(description)
+        await addTodo(description, session?.user?.id as string);
         setDescription('');
     }
 

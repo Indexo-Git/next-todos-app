@@ -20,6 +20,11 @@ npx prisma generate
 ```
 7. Execute SEED to create DB (localhost:3000/api/seed)
 
+## Note: default user
+__user:__ test1@google.com
+__password:__ 123456
+
+
 
 # Prisma commands
 ```
